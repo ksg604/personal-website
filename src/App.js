@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './pages/Home/Home.js';
 
 function App() {
   return (
     <div className="App">
+      {/* Initial app code
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -17,7 +19,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header>*/}
+      <Home/>
     </div>
   );
 }
