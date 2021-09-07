@@ -2,7 +2,9 @@ import './Navbar.css';
 
 function Navbar(props) {
   return(
-    <p>sup</p>
+    <div className="Navbar">
+      s
+    </div>
   );
 }
 
