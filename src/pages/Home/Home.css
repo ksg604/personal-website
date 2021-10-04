@@ -1,0 +1,9 @@
+.Home {
+  background-color: white;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
