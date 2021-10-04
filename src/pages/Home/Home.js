@@ -3,8 +3,8 @@ import Header from '../../parts/Header/Header.js';
 
 function Home(props) {
   return (
-    <Header />
-  )
+    <Header/>
+  );
 }
 
 export default Home;

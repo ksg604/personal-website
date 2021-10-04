@@ -1,9 +1,11 @@
 import './Contact.css';
 
-export default function Contact(props) {
+function Contact(props) {
   return(
     <div className="Contact">
       Contact me
     </div>
   );
 }
+
+export default Contact;

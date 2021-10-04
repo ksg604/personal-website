@@ -1,9 +1,10 @@
 import './About.css';
 
-export default function About(props) {
+function About(props) {
   return(
     <div className="AboutMe">
       s
     </div>
-  )
+  );
 }
+export default About;
