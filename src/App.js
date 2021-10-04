@@ -1,13 +1,13 @@
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
+import Header from './parts/Header/Header';
 
 export default function App() {
   return (
     <Router>
       <div className="App">
         <main>
-          <Navbar/>
+          <Header/>
         </main>
       </div>
     </Router>

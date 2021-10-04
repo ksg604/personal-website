@@ -1,7 +1,8 @@
 import './Navbar.css';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import About from '../../pages/About/About';
 import Contact from '../../pages/Contact/Contact';
+import Home from '../../pages/Home/Home';
 
 function Navbar(props) {
   return(
@@ -19,14 +20,11 @@ function Navbar(props) {
           </li>
         </ul>
       </nav>
-      <Switch>
-        <Route path="/about">
-          <About/>
-        </Route>
-        <Route path="/contact">
-          <Contact/>
-        </Route>
-      </Switch>
+
+      <Route path="/" exact component={Home}/>
+      <Route path="/about" exact component={About}/>
+      <Route path="/contact" exact component={Contact}/>
+      
     </div>
   );
 }

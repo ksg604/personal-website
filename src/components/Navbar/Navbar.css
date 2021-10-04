@@ -1,4 +1,13 @@
-.Navbar {
+.Navbar nav ul {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+
+.Navbar nav ul li {
+  list-style: none;
+}
+
+.Navbar nav ul li a{
+  text-decoration: none;
 }
