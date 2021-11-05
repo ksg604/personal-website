@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar/Navbar';
 
 function Header(props) {
   return(
-    <div>
+    <div className="Header">
       <Navbar/>
     </div>
   );

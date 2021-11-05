@@ -1,13 +1,16 @@
 import './Navbar.css';
-import { Link, Route } from 'react-router-dom';
-import About from '../../pages/About/About';
-import Contact from '../../pages/Contact/Contact';
-import Home from '../../pages/Home/Home';
+import { Link} from 'react-router-dom';
 
 function Navbar(props) {
   return(
     <div className="Navbar">
-      <nav>
+
+      <div id="Navbar-button">
+        <div className="Navbar-button-line"></div>
+        <div className="Navbar-button-line"></div>
+        <div className="Navbar-button-line"></div>
+      </div>
+      <nav className="hidden">
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -19,12 +22,7 @@ function Navbar(props) {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
-      </nav>
-
-      <Route path="/" exact component={Home}/>
-      <Route path="/about" exact component={About}/>
-      <Route path="/contact" exact component={Contact}/>
-      
+      </nav>   
     </div>
   );
 }

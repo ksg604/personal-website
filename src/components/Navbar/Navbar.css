@@ -1,3 +1,33 @@
+
+#Navbar-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #54B689;
+  border: solid 1.5px;
+  border-color: white;
+  width: 45px;
+  height: 35px;
+  padding: 5px;
+}
+
+.Navbar-button-line {
+  width: 60%;
+  border-top: 3px solid white;
+  border-radius: 1px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+
+
+
 .Navbar nav ul {
   display: flex;
   flex-direction: row;
@@ -11,3 +41,6 @@
 .Navbar nav ul li a{
   text-decoration: none;
 }
+
+
+
