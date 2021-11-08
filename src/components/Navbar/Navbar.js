@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons' 
+import {faUser, faLaptopCode} from '@fortawesome/free-solid-svg-icons';
 
-library.add(faGithub); 
+library.add(faGithub, faLaptopCode); 
 library.add(faTwitter);
 library.add(faLinkedin);
+library.add(faUser);
 
 
 class Navbar extends React.Component {
@@ -53,18 +55,27 @@ class Navbar extends React.Component {
               </li>
             </ul>
           </section>
-
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
+          <hr></hr>
+          <section id="Navbar-nav-link-container">
+            <ul id="Navbar-nav-links">
+              <li className="Navbar-nav-item">
+                <Link to="/about"> 
+                  <FontAwesomeIcon icon={['fas', 'user']} size="2x" color="white" fixedWidth/>
+                  <div>
+                    <h3>About Me</h3>
+                  </div>
+                </Link>
+              </li>
+              <li className="Navbar-nav-item">
+                <Link to="contact">
+                  <FontAwesomeIcon icon={['fas', 'laptop-code']} size="2x" color="white" fixedWidth/>
+                  <div>
+                    <h3>Portfolio</h3>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </section>
         </nav>   
       </div>
     );

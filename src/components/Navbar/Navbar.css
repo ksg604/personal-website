@@ -81,18 +81,60 @@
 
 #Navbar-bio #Navbar-bio-description {
   color: white;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin: 1rem 0;
   font-size: 0.875rem;
 }
 
 #Navbar-social-list{
   display: flex;
   flex-direction: row;
+  margin: 0.5rem 0;
 }
 
 #Navbar-social-list li.Navbar-social-item:not(:last-child) { 
-  margin-right: 10px;  
+  margin-right: 1rem;  
+}
+
+hr {
+  height: 1px;
+  width: 80%;
+  border-top: 0;
+  margin: 0.5rem 0;
+  opacity: 35%;
+}
+
+#Navbar-nav-link-container {
+  width: 80%;
+}
+
+#Navbar-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Navbar-nav-item a {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.Navbar-nav-item div {
+  display: flex;
+  align-items: center;
+}
+
+.Navbar-nav-item div h3 {
+  margin-left: 1rem;
+  color: white;
+}
+
+.Navbar-nav-item:hover h3 {
+  color: grey;
+}
+
+#Navbar-nav-links li.Navbar-nav-item:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 
