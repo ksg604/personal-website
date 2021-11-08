@@ -1,4 +1,25 @@
 
+.Navbar {
+  width: 100%;
+}
+
+#Navbar-button-name-container {
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+}
+
+#Navbar-name-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#Navbar-name {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
 #Navbar-button {
   display: flex;
   flex-direction: column;
@@ -18,20 +39,21 @@
   border-radius: 1px;
 }
 
-.hidden {
-  display: none;
+.shown {
+  max-height: 100px;
+  transition: max-height 0.5s ease-in;
 }
 
-
-
-
-
-
+.hidden {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
 
 .Navbar nav ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .Navbar nav ul li {

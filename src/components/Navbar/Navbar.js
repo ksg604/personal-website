@@ -7,7 +7,6 @@ class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {isNavVisible: false};
-    this.navigationRef = React.createRef();
     this.toggleNavigation = this.toggleNavigation.bind(this);
   }
   toggleNavigation() {
@@ -18,16 +17,18 @@ class Navbar extends React.Component {
   render() {
     const { isNavVisible } = this.state;
     return(
-
-      
       <div className="Navbar">
-  
-        <div id="Navbar-button" onClick={this.toggleNavigation}>
-          <div className="Navbar-button-line"></div>
-          <div className="Navbar-button-line"></div>
-          <div className="Navbar-button-line"></div>
+        <div id="Navbar-button-name-container">
+          <div id="Navbar-button" onClick={this.toggleNavigation}>
+            <div className="Navbar-button-line"></div>
+            <div className="Navbar-button-line"></div>
+            <div className="Navbar-button-line"></div>
+          </div>
+          <div id="Navbar-name-container">
+            <h2 id="Navbar-name">Kevin San Gabriel</h2>
+          </div>
         </div>
-        <nav id="navigation" className={isNavVisible ? "" : "hidden"} ref={this.navigationRef}>
+        <nav id="navigation" className={isNavVisible ? "shown" : "hidden"}>
           <ul>
             <li>
               <Link to="/">Home</Link>
