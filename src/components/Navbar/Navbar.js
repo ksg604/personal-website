@@ -4,13 +4,9 @@ import { Link } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons' 
-import {faUser, faLaptopCode} from '@fortawesome/free-solid-svg-icons';
+import {faUser, faLaptopCode, faFileAlt, faEnvelopeOpenText, faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 
-library.add(faGithub, faLaptopCode); 
-library.add(faTwitter);
-library.add(faLinkedin);
-library.add(faUser);
-
+library.add(faGithub, faLaptopCode, faTwitter, faLinkedin, faUser, faFileAlt, faEnvelopeOpenText, faPaperPlane); 
 
 class Navbar extends React.Component {
 
@@ -60,21 +56,50 @@ class Navbar extends React.Component {
             <ul id="Navbar-nav-links">
               <li className="Navbar-nav-item">
                 <Link to="/about"> 
-                  <FontAwesomeIcon icon={['fas', 'user']} size="2x" color="white" fixedWidth/>
+                  <FontAwesomeIcon icon={['fas', 'user']} size="2x" color="white" fixedWidth className="nav-link-icon"/>
                   <div>
                     <h3>About Me</h3>
                   </div>
                 </Link>
               </li>
               <li className="Navbar-nav-item">
-                <Link to="contact">
-                  <FontAwesomeIcon icon={['fas', 'laptop-code']} size="2x" color="white" fixedWidth/>
+                <Link to="/portfolio">
+                  <FontAwesomeIcon icon={['fas', 'laptop-code']} size="2x" color="white" fixedWidth className="nav-link-icon"/>
                   <div>
                     <h3>Portfolio</h3>
                   </div>
                 </Link>
               </li>
+              <li className="Navbar-nav-item">
+                <Link to="/resume">
+                  <FontAwesomeIcon icon={['fas', 'file-alt']} size="2x" color="white" fixedWidth className="nav-link-icon"/>
+                  <div>
+                    <h3>Resume</h3>
+                  </div>
+                </Link> 
+              </li>
+              <li className="Navbar-nav-item">
+                <Link to="/contact">
+                  <FontAwesomeIcon icon={['fas', 'envelope-open-text']} size="2x" color="white" fixedWidth className="nav-link-icon"/>
+                  <div>
+                    <h3>Contact</h3>
+                  </div>
+                </Link> 
+              </li>
             </ul>
+            <div id="hire-me-button">
+              <Link to="/contact">
+                <div>
+                  <div id="hire-me-container">
+                    <FontAwesomeIcon icon={['fas', 'paper-plane']} size="lg" color="white"/>
+                    <div>
+                      <h3>Hire Me</h3>
+                    </div>
+                  </div>
+                </div>
+                
+              </Link>
+            </div>
           </section>
         </nav>   
       </div>
