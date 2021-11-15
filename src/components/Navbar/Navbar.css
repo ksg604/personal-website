@@ -3,6 +3,10 @@ a {
   text-decoration: none;
 }
 
+.white-text {
+  color: white;
+}
+
 .Navbar {
   width: 100%;
 }
@@ -19,7 +23,6 @@ a {
   width: 100%;
 }
 #Navbar-name {
-  color: white;
   width: 100%;
   text-align: center;
 }
@@ -80,7 +83,6 @@ a {
 }
 
 #Navbar-bio #Navbar-bio-description {
-  color: white;
   margin: 1rem 0;
   font-size: 0.875rem;
 }
@@ -99,7 +101,7 @@ hr {
   height: 1px;
   width: 80%;
   border-top: 0;
-  margin: 0.75rem 0;
+  margin: 0.95rem 0;
   opacity: 35%;
 }
 
@@ -126,7 +128,6 @@ hr {
 
 .Navbar-nav-item div h3 {
   margin-left: 1rem;
-  color: white;
 }
 
 .Navbar-nav-item:hover h3 {
@@ -147,23 +148,47 @@ hr {
   justify-content: center;
   height: 40px;
   width: 100%;
-  background: rgba(0,0,0,0.8);
-  margin: 0.75rem 0;
+  background: rgba(0,0,0,0.4);
+  margin: 0.95rem 0;
 }
 
 #hire-me-container {
   display: flex;
   flex-direction: row;
-  height: 40%;
 }
 
-#hire-me-container h3{
-  color: white;
+#hire-me-button a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#hire-me-button div {
-  height: 100%;
+#Navbar-dark-mode-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
 }
+
+#Navbar-dark-mode-container div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#dark-mode-title{
+  margin-left: 0.25rem;
+}
+
+#dark-mode-toggle-label {
+  cursor: pointer;
+  border: 3px solid rgba(255,255,255,0.4);
+  border-radius: 16px;
+  width: 70px;
+  height: 30px;
+}
+
 
 
 
