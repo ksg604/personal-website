@@ -107,7 +107,9 @@ class Navbar extends React.Component {
               </h4>
             </div>
             <input id="dark-mode-toggle"  type="checkbox"></input>
-            <label id="dark-mode-toggle-label" for="dark-mode-toggle"></label>
+            <label id="dark-mode-toggle-label" for="dark-mode-toggle">
+            
+            </label>
           </section>
         </nav>   
       </div>

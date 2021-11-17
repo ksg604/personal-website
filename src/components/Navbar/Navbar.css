@@ -181,13 +181,41 @@ hr {
   margin-left: 0.25rem;
 }
 
-#dark-mode-toggle-label {
+#dark-mode-toggle {
+  display: none;
+}
+
+#dark-mode-toggle+#dark-mode-toggle-label:after,
+#dark-mode-toggle+#dark-mode-toggle-label:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+
+#dark-mode-toggle+#dark-mode-toggle-label:before {
+  display: none;
+}
+
+#dark-mode-toggle+#dark-mode-toggle-label:after {
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  background: rgba(255,255,255,0.4);
+  content: "";
+  border-radius: 16px;
+}
+
+#dark-mode-toggle+#dark-mode-toggle-label {
+  position: relative;
   cursor: pointer;
   border: 3px solid rgba(255,255,255,0.4);
   border-radius: 16px;
   width: 70px;
   height: 30px;
+  padding: 1px;
 }
+
 
 
 
