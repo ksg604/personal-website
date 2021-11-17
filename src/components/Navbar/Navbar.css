@@ -185,6 +185,10 @@ hr {
   display: none;
 }
 
+#dark-mode-toggle-label {
+  margin-top: 1rem;
+}
+
 #dark-mode-toggle+#dark-mode-toggle-label:after,
 #dark-mode-toggle+#dark-mode-toggle-label:before {
   position: relative;
@@ -204,6 +208,10 @@ hr {
   background: rgba(255,255,255,0.4);
   content: "";
   border-radius: 16px;
+}
+
+#dark-mode-toggle:checked+#dark-mode-toggle-label:after {
+  left: 50%;
 }
 
 #dark-mode-toggle+#dark-mode-toggle-label {

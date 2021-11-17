@@ -12,17 +12,23 @@ class Navbar extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {isNavVisible: false};
+    this.state = {isNavVisible: false, isDarkMode: false};
     this.toggleNavigation = this.toggleNavigation.bind(this);
+    this.toggleDarkMode = this.toggleDarkMode.bind(this);
   }
   toggleNavigation() {
     this.setState(prevState => ({isNavVisible: 
       !prevState.isNavVisible
     }));
   }
-  render() {
 
-    const { isNavVisible } = this.state;
+  toggleDarkMode() {
+    this.setState(prevState => ({isDarkMode:
+      !prevState.isDarkMode
+    }));
+    this.props.setDarkMode(this.state.isDarkMode);
+  }
+  render() {
     return(
       <div className="Navbar">
         <div id="Navbar-button-name-container">
@@ -32,13 +38,13 @@ class Navbar extends React.Component {
             <div className="Navbar-button-line"></div>
           </div>
           <div id="Navbar-name-container">
-            <h2 id="Navbar-name" class="white-text">Kevin San Gabriel</h2>
+            <h2 id="Navbar-name" className="white-text">Kevin San Gabriel</h2>
           </div>
         </div>
-        <nav id="navigation" className={isNavVisible ? "shown" : "hidden"}>
+        <nav id="navigation" className={this.state.isNavVisible ? "shown" : "hidden"}>
           <section id="Navbar-bio">
             <img id="Navbar-bio-photo" src="./images/bio_photo_placeholder2.jpeg" height="200" width="200" alt="profile_picture"></img>
-            <p id="Navbar-bio-description" class="white-text">Hi, my name is Kevin San Gabriel and I'm a junior front-end web developer.  Welcome to my personal website!</p>
+            <p id="Navbar-bio-description" className="white-text">Hi, my name is Kevin San Gabriel and I'm a junior front-end web developer.  Welcome to my personal website!</p>
             <ul id="Navbar-social-list">
               <li className="Navbar-social-item">
                 <FontAwesomeIcon icon={['fab', 'github']} size="2x" color="white"/>
@@ -107,9 +113,7 @@ class Navbar extends React.Component {
               </h4>
             </div>
             <input id="dark-mode-toggle"  type="checkbox"></input>
-            <label id="dark-mode-toggle-label" for="dark-mode-toggle">
-            
-            </label>
+            <label id="dark-mode-toggle-label" htmlFor="dark-mode-toggle" onClick={this.toggleDarkMode}></label>
           </section>
         </nav>   
       </div>
