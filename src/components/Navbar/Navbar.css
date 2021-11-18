@@ -1,6 +1,11 @@
 
+
 a {
   text-decoration: none;
+}
+
+.grey-text {
+  color:rgba(255,255,255,0.7);
 }
 
 .white-text {
@@ -93,8 +98,20 @@ a {
   margin: 0.75rem 0;
 }
 
-#Navbar-social-list li.Navbar-social-item:not(:last-child) { 
+#Navbar-social-list li:not(:last-child) { 
   margin-right: 1rem;  
+}
+
+#Navbar-social-list li {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 hr {
@@ -150,6 +167,7 @@ hr {
   width: 100%;
   background: rgba(0,0,0,0.4);
   margin: 0.95rem 0;
+  border-radius: 4px;
 }
 
 #hire-me-container {
