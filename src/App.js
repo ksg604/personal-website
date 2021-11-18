@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   darkModeCallback(isDarkMode) {
-    console.log(isDarkMode);
+    this.setState(() => ({ isDarkMode: isDarkMode }));
   }
 
   render() {

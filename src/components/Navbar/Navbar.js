@@ -12,7 +12,7 @@ class Navbar extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {isNavVisible: false, isDarkMode: false};
+    this.state = {isNavVisible: false, isDarkModeToggled: false};
     this.toggleNavigation = this.toggleNavigation.bind(this);
     this.toggleDarkMode = this.toggleDarkMode.bind(this);
   }
@@ -23,10 +23,9 @@ class Navbar extends React.Component {
   }
 
   toggleDarkMode() {
-    this.setState(prevState => ({isDarkMode:
-      !prevState.isDarkMode
-    }));
-    this.props.setDarkMode(this.state.isDarkMode);
+    this.setState(prevState => ({isDarkModeToggled:
+      !prevState.isDarkModeToggled
+    }), () => { this.props.setDarkMode(this.state.isDarkModeToggled); console.log(this.state.isDarkModeToggled); } );
   }
   render() {
     return(
